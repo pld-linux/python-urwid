@@ -2,12 +2,12 @@
 Summary:	Urwid is a console user interface library for Python
 Summary(hu.UTF-8):	Urwid egy konzolos felhasználói felület könyvtár Pythonhoz
 Name:		python-%{module}
-Version:	0.9.8.4
-Release:	2
+Version:	1.0.1
+Release:	1
 License:	LGPL
 Group:		Development/Languages/Python
 Source0:	http://excess.org/urwid/urwid-%{version}.tar.gz
-# Source0-md5:	28f918c66887d4e470ae0c3535579ad7
+# Source0-md5:	828f7144b94920205e755c249d2e297f
 URL:		http://excess.org/urwid/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
