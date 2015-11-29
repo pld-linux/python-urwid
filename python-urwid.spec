@@ -11,7 +11,7 @@ Source0:	http://excess.org/urwid/urwid-%{version}.tar.gz
 URL:		http://excess.org/urwid/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
