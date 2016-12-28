@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	doc	# docs build
-%bcond_without	tests	# test target
+%bcond_with	tests	# test target (fails on builders due to lack of pts)
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
@@ -11,7 +11,7 @@ Summary(hu.UTF-8):	Urwid egy konzolos felhasználói felület könyvtár Pythonh
 Summary(pl.UTF-8):	Urwid - biblioteka konsolowego interfejsu użytkownika dla Pythona 2
 Name:		python-%{module}
 Version:	1.3.1
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Development/Languages/Python
 #Source0Download: http://urwid.org/
@@ -104,8 +104,10 @@ rm -rf $RPM_BUILD_ROOT
 
 # tests
 %{__rm} -r $RPM_BUILD_ROOT%{py3_sitedir}/urwid/tests
-# unversioned
+%if %{with tests}
+# unversioned copy installed if tests are run
 %{__rm} -r $RPM_BUILD_ROOT%{py3_sitedir}/urwid.egg-info
+%endif
 %endif
 
 %clean
