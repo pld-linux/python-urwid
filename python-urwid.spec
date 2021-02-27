@@ -113,6 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %{with python2}
 %files
 %defattr(644,root,root,755)
 %doc README.rst docs/changelog.rst
@@ -120,7 +121,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{py_sitedir}/urwid/str_util.so
 %{py_sitedir}/urwid/*.py[co]
 %{py_sitedir}/urwid-%{version}-py*.egg-info
+%endif
 
+%if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
 %doc README.rst docs/changelog.rst
@@ -129,6 +132,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitedir}/urwid/*.py
 %{py3_sitedir}/urwid/__pycache__
 %{py3_sitedir}/urwid-%{version}-py*.egg-info
+%endif
 
 %if %{with doc}
 %files apidocs
