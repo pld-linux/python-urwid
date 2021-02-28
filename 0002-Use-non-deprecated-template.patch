@@ -1,0 +1,23 @@
+From: Jochen Sprickerhof <jspricke@debian.org>
+Date: Sun, 9 Aug 2020 17:04:59 +0200
+Subject: Use non deprecated template
+
+defindex.html was deprecated a long time ago, see
+
+https://github.com/python/cpython/commit/7970cd483346dfd7723da214fb27399ecc574095
+
+for example.
+---
+ docs/tools/templates/indexcontent.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/docs/tools/templates/indexcontent.html b/docs/tools/templates/indexcontent.html
+index b7d2ca6..bd50389 100644
+--- a/docs/tools/templates/indexcontent.html
++++ b/docs/tools/templates/indexcontent.html
+@@ -1,4 +1,4 @@
+-{% extends "!defindex.html" %}
++{% extends "layout.html" %}
+ {% block body %}
+ <h1>Urwid{% if 'dev' in release %} development version{% endif %}</h1>
+ <div style="float: left; width: 500px;">
