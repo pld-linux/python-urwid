@@ -11,7 +11,7 @@ Summary(hu.UTF-8):	Urwid egy konzolos felhasználói felület könyvtár Pythonh
 Summary(pl.UTF-8):	Urwid - biblioteka konsolowego interfejsu użytkownika dla Pythona 2
 Name:		python-%{module}
 Version:	2.1.2
-Release:	6
+Release:	7
 License:	LGPL v2.1+
 Group:		Development/Languages/Python
 #Source0Download: http://urwid.org/
