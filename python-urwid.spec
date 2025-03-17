@@ -3,7 +3,7 @@
 %bcond_without	doc	# docs build
 %bcond_with	tests	# test target (fails on builders due to lack of pts)
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module
 
 %define 	module	urwid
 Summary:	Urwid - a console user interface library for Python 2
